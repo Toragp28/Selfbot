@@ -19,8 +19,8 @@ Avertissement
 
 Fonctionnalités
 
-Support multi-comptes : Lancez plusieurs selfbots simultanément à l'aide d'un fichier ``` tokens.txt ``.
-Système de commandes modulaire : Ajoutez, supprimez ou modifiez facilement des commandes dans le dossier commands.
+Support multi-comptes : Lancez plusieurs selfbots simultanément à l'aide d'un fichier "tokens.txt" .
+Système de commandes modulaire : Ajoutez, supprimez ou modifiez facilement des commandes dans le dossier "commands".
 Gestion des erreurs : Gestion robuste des erreurs pour l'exécution des commandes et les connexions des clients.
 Préfixe personnalisable : Configurez le préfixe des commandes (par défaut : !).
 Variables d'environnement : Gérez les tokens et les paramètres en toute sécurité avec .env.
@@ -60,8 +60,10 @@ Créer un fichier .envDans le dossier racine du projet, créez un fichier .env p
 
 
 Configurer les tokensCréez un fichier tokens.txt dans le dossier racine et ajoutez vos tokens utilisateur Discord, un par ligne. Exemple :
+```bash
 votre_token_utilisateur_discord_ici
 un_autre_token_utilisateur_discord_ici
+```
 
 
 Comment obtenir votre token :  
@@ -81,20 +83,24 @@ Configuration
 Le selfbot est préconfiguré avec des paramètres par défaut, mais vous pouvez personnaliser les éléments suivants :
 
 Préfixe des commandes : Modifiez la variable selfbotPrefix dans le script principal (par défaut : !).
-Intents : Le selfbot utilise des intents Discord spécifiques pour plus d'efficacité. Modifiez le tableau intents dans la configuration du Client si nécessaire :intents: [
+Intents : Le selfbot utilise des intents Discord spécifiques pour plus d'efficacité. Modifiez le tableau intents dans la configuration du Client si nécessaire :
+```js
+intents: [
     1 << 0, // GUILDS
     1 << 1, // GUILD_MEMBERS
     1 << 9, // GUILD_MESSAGES
     1 << 12 // DIRECT_MESSAGES
 ]
-
+```
 
 
 
 Utilisation
 
 Lancer le selfbotDémarrez le selfbot en exécutant le script principal :
+```bash
 node index.js
+```
 
 Le selfbot va :
 
@@ -105,8 +111,9 @@ Journaliser l'état de la connexion et l'exécution des commandes.
 
 
 Exécuter des commandesEnvoyez un message dans Discord commençant par le préfixe (!) suivi du nom de la commande. Par exemple :
+```bash
 !ping
-
+```
 
 Note : Le selfbot ne répond qu'aux commandes envoyées par le compte sur lequel il s'exécute.
 
@@ -121,6 +128,7 @@ Le framework prend en charge des commandes modulaires stockées dans le dossier 
 Créer un fichier de commandeCréez un fichier .js dans le dossier commands, par exemple, ping.js.
 
 Structure de la commandeExemple commands/ping.js :
+```js
 module.exports = {
     name: 'ping',
     description: 'Vérifie si le selfbot est réactif',
@@ -128,7 +136,7 @@ module.exports = {
         await message.reply('Pong !');
     }
 };
-
+``` 
 
 Exigences des commandes  
 
