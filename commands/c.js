@@ -1,10 +1,10 @@
 const { Client } = require('discord.js-selfbot-v13');
 
-
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 module.exports = {
     name: 'c',
+    description: 'spam de message ',
     async execute(message, args) {
         try {
             

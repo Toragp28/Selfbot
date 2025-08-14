@@ -3,6 +3,7 @@ const path = require('path');
 
 module.exports = {
     name: 'help',
+    
     description: 'Lists all available commands for the selfbot.',
     execute(message, args) {
         const commandsPath = path.join(__dirname, '.');

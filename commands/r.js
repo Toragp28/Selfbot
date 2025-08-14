@@ -7,6 +7,7 @@ const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 module.exports = {
     name: 'r',
+    description: 'multipe commande pour raid ou pire forme de la commande ( !r "lattaque") ',
     async execute(message, args) {
         try {
             
