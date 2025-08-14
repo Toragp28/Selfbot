@@ -1,5 +1,6 @@
-# Selfbot
-Framework de Selfbot Discord
+## Selfbot
+
+# Framework de Selfbot Discord
 Un framework puissant et personnalisable pour créer des selfbots Discord avec discord.js-selfbot-v13. Ce projet permet d'automatiser des tâches, d'exécuter des commandes personnalisées et de gérer plusieurs comptes selfbot facilement. Il est conçu pour les développeurs souhaitant créer leur propre selfbot Discord avec une gestion modulaire des commandes et une robuste gestion des erreurs.
 
 Table des matières
@@ -18,7 +19,7 @@ Avertissement
 
 Fonctionnalités
 
-Support multi-comptes : Lancez plusieurs selfbots simultanément à l'aide d'un fichier tokens.txt.
+Support multi-comptes : Lancez plusieurs selfbots simultanément à l'aide d'un fichier ``` tokens.txt ``.
 Système de commandes modulaire : Ajoutez, supprimez ou modifiez facilement des commandes dans le dossier commands.
 Gestion des erreurs : Gestion robuste des erreurs pour l'exécution des commandes et les connexions des clients.
 Préfixe personnalisable : Configurez le préfixe des commandes (par défaut : !).
@@ -43,13 +44,15 @@ Installation
 Suivez ces étapes pour configurer le framework de selfbot sur votre machine :
 
 Cloner le dépôtClonez ou téléchargez ce projet sur votre machine :
+```bash
 git clone https://github.com/votre_nom_utilisateur/discord-selfbot-framework.git
 cd discord-selfbot-framework
-
+```
 
 Installer les dépendancesInstallez les paquets Node.js requis :
+```bash
 npm install discord.js-selfbot-v13 dotenv fs path
-
+``` 
 
 Créer un fichier .envDans le dossier racine du projet, créez un fichier .env pour stocker les configurations spécifiques (si nécessaire). Exemple :
 # Optionnel : Ajoutez des variables d'environnement ici
